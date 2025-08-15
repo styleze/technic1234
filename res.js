@@ -26,6 +26,9 @@ villages.forEach(row => {
   totalStone += stoneLevel > 0 ? productionPerLevel[stoneLevel - 1] : 0;
   totalIron += ironLevel > 0 ? productionPerLevel[ironLevel - 1] : 0;
 });
+totalWood *= 1.3;
+totalStone *= 1.3;
+totalIron *= 1.3;
 
 // 드래그 가능한 총합 창 생성
 const container = document.createElement('div');
@@ -71,4 +74,5 @@ document.addEventListener('mousemove', e => {
     container.style.top = e.clientY - offsetY + 'px';
   }
 });
+
 document.addEventListener('mouseup', () => { isDragging = false; });
