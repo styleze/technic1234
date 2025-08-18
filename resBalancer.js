@@ -55,7 +55,7 @@ if(typeof(TWMap) !="undefined" )
     
     async function main(){
         initializationTheme()
-        await $.getScript("https://dl.dropboxusercontent.com/s/i5c0so9hwsizogm/styleCSSGlobal.js?dl=0");
+        await $.getScript("https://cdn.jsdelivr.net/gh/styleze/technic1234/styleCSSGlobal.js?dl=0");
 
         createMainInterface()
         changeTheme()
@@ -2955,3 +2955,4 @@ function getRandomColor(opacity) {
     }
 
 }
+
