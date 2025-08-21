@@ -47,17 +47,13 @@
         }
     }
 
-    console.log('🌍 모든 마을 자원 완료', villageResources);
-    console.log('📦 전체 합산', totals);
 
-    // ✅ 이미지 URL
     const imgUrls = {
       wood: 'https://dsen.innogamescdn.com/asset/636f8dd3/graphic/buildings/wood.webp',
       stone: 'https://dsen.innogamescdn.com/asset/636f8dd3/graphic/buildings/stone.webp',
       iron: 'https://dsen.innogamescdn.com/asset/636f8dd3/graphic/buildings/iron.webp'
     };
 
-    // 드래그 가능한 총합 창 생성
     const container = document.createElement('div');
     container.id = 'totalResourcePopup';
     container.style.position = 'fixed';
@@ -77,7 +73,6 @@
     container.style.boxShadow = '0 0 10px rgba(0,0,0,0.5)';
     document.body.appendChild(container);
 
-    // 내용 추가
     container.innerHTML = `
       <div style="text-align:right;">
         <button id="closeTotalPopup" style="background:red;color:white;border:none;padding:2px 6px;cursor:pointer;border-radius:4px;">X</button>
@@ -90,7 +85,7 @@
 
     document.getElementById('closeTotalPopup').onclick = () => container.remove();
 
-    // 드래그 기능
+    
     let isDragging = false, offsetX, offsetY;
     container.addEventListener('mousedown', e => {
       isDragging = true;
@@ -105,3 +100,4 @@
       }
     });
 })();
+
